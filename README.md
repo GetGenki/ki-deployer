@@ -64,6 +64,11 @@ yarn global add lerna
 cd core
 lerna bootstrap
 ```
+if the install failed because of rights issues, please try: 
+
+```bash
+sudo npm install --g lerna
+```
 
 #### Configure the core
 Finally, let's configure the core. This is done inside the _.env_ file. Start by navigating to your home directory and by creating the file inside the .ark/ dir
