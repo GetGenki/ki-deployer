@@ -110,7 +110,7 @@ vim delegates.json
 It looks something like this :
 ```bash
 {
-  "secrets": []
+  "secrets": ["word1 word2 word3 word4 etc..."]
 }
 ```
 
