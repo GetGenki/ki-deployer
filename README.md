@@ -43,6 +43,9 @@ git clone --single-branch --branch devnet/dev https://github.com/GetGenki/core
 ```
 
 #### Set the environment
+And make sure you have installed yarn:
+https://yarnpkg.com/lang/en/docs/install/#debian-stable
+
 Second, we need to setup the the environment's modules and dependencies. Let _lerna_ do the job ...
 ```bash
 yarn global add lerna
