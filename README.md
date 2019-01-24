@@ -30,8 +30,8 @@ Finally, create the user, and grant them access to the database
 ```bash
 sudo -u postgres createuser <your_username_of_choice>
 sudo -u postgres psql
-ALTER USER <your_username> WITH ENCRYPTED PASSWORD <your_password_of_choice>
-GRANT ALL PRIVILEDGES ON DATABASE kinet_db TO <your_username>
+ALTER USER <your_username> WITH ENCRYPTED PASSWORD '<your_password_of_choice>';
+GRANT ALL PRIVILEGES ON DATABASE kinet_db TO <your_username>;
 ```
 
 ### KiChain core
