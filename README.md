@@ -51,10 +51,10 @@ lerna bootstrap
 ```
 
 #### Configure the core
-Finally, let's configure the core. This is done inside the _.env_ file. Start by navigating to your home directory and by creating the file inside the .ark/ dir
+Finally, let's configure the core. This is done inside the _.env_ file. Start by navigating to your home directory and by creating the .ark/ folder and the _.env_  file inside it.
 
 ```bash
-cd ~/.ark/ && vim .env
+mkdir ~/.ark/ && cd ~/.ark/ && vim .env
 ```
 
 fill the newly created file with the following configuration :
