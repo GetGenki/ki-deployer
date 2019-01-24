@@ -43,8 +43,20 @@ git clone --single-branch --branch devnet/dev https://github.com/GetGenki/core
 ```
 
 #### Set the environment
-And make sure you have installed yarn:
-https://yarnpkg.com/lang/en/docs/install/#debian-stable
+And make sure you have installed an updated version of NodeJS & yarn:
+
+```bash
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+and then
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt-get update && sudo apt-get install yarn
+```
 
 Second, we need to setup the the environment's modules and dependencies. Let _lerna_ do the job ...
 ```bash
