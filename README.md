@@ -81,7 +81,7 @@ mkdir ~/.ark/ && cd ~/.ark/ && vim .env
 fill the newly created file with the following configuration :
 ```
 # The host to connect to the other nodes
-ARK_P2P_HOST=167.114.236.26
+ARK_P2P_HOST=0.0.0.0
 ARK_P2P_PORT=4000
 
 # The host to receive the API calls
