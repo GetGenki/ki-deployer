@@ -75,7 +75,8 @@ Now that the environment is set, you can launch your validator... But first let'
 
 Go to the delegates file:
 ```bash
-cd ~/core/packages/core/lib/config/kinet/delegates.json
+cd ~/core/packages/core/lib/config/kinet/
+vim delegates.json
 ```
 
 It looks something like this :
