@@ -8,7 +8,7 @@ In progress ...
 This is a break down of the installation steps. It allows a better understanding of what is happening in the background when using the one command installation script.
 
 ### Database
-We need to create the database to store the blockchain data. After this step, you need to end up with a database "kinet_db" and a user with a full access into it. Do it your way or follow these steps:
+We first need to create the database to store the blockchain data. After this step, you must end up with a database ("kinet_db") and a user with a full access to it. Do it your way or follow these steps:
 
 Install postgres
 ```bash
@@ -27,10 +27,10 @@ ALTER USER <your_username> WITH ENCRYPTED PASSWORD <your_password_of_choice>
 GRANT ALL PRIVILEDGES ON DATABASE ark_kinet TO <your_username>
 ```
 
-
 ### KiChain core
 #### Clone the repository
-First, let's get the code of the core.
+First, let's get the code of the core. The latest modifications will be pushed to the devnet/dev branch during the development phase.
+
 ```bash
 git clone --single-branch --branch devnet/dev https://github.com/GetGenki/core
 ```
@@ -73,15 +73,29 @@ ARK_API_RATE_LIMIT_USER_LIMIT=900
 ### Launch components
 Now that the environment is set, you can launch your validator... But first let's configure the identity of the delegate. This is done by navigating to the delegate.json file and by filling in the secrete passphrase of the delegate:
 
+Go to the delegates file:
+```bash
+cd ~/core/packages/core/lib/config/kinet/delegates.json
+```
+
+It looks something like this :
+```bash
+{
+  "secrets": []
+}
+```
+
+Add your secret phrase between the square brackets.
+
 #### Relay
 Start by launching the relay:
 ```bash
 cd ~/core/packages/core
 yarn relay:kinet
 ```
-Your relay will start synchronising the blockchain with the other peers on the network. This is similar to :
+Your relay will start synchronising the blockchain with the other peers on the network. This looks like this:
 
-<image goes here>
+![Synchronizing relay]("/img/relay-synch.png")
 
 #### Validator
 And then your validator...
