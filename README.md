@@ -1,6 +1,13 @@
 # ki-deployer
 A tutorial and a script to deploy Ki relays and validators (Devnet)
 
+
+## Registering the validator
+In order to be able to start validating blocks on the devnet, your wallet needs to be registered as a validator delegate. This can be done inside the wallet application (desktop and mobile). The following screenshots shows the validator registration process inside the wallet. First, from your wallet hit the option list button on the top right corner. Then, select the register delegate option. Finally chose a name for your delegate and hit create. Registering a delegate implies a fee of 25 DKI.
+
+![Synchronizing relay](/img/del1.jpg) ![Synchronizing relay](/img/del2.jpg) ![Synchronizing relay](/img/del3.jpg)
+
+
 ## One command installation
 In progress ...
 
@@ -24,7 +31,7 @@ Finally, create the user, and grant them access to the database
 sudo -u postgres createuser <your_username_of_choice>
 sudo -u postgres psql
 ALTER USER <your_username> WITH ENCRYPTED PASSWORD <your_password_of_choice>
-GRANT ALL PRIVILEDGES ON DATABASE ark_kinet TO <your_username>
+GRANT ALL PRIVILEDGES ON DATABASE kinet_db TO <your_username>
 ```
 
 ### KiChain core
@@ -103,6 +110,7 @@ And then your validator...
 ```bash
 yarn validator:kinet
 ```
+
 
 ## Credits
 * __Genki Team:__
