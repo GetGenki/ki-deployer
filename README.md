@@ -30,8 +30,8 @@ Finally, create the user, and grant them access to the database
 ```bash
 sudo -u postgres createuser <your_username_of_choice>
 sudo -u postgres psql
-ALTER USER <your_username> WITH ENCRYPTED PASSWORD <your_password_of_choice>
-GRANT ALL PRIVILEDGES ON DATABASE kinet_db TO <your_username>
+ALTER USER <your_username> WITH ENCRYPTED PASSWORD '<your_password_of_choice>';
+GRANT ALL PRIVILEGES ON DATABASE kinet_db TO <your_username>;
 ```
 
 ### KiChain core
@@ -43,11 +43,31 @@ git clone --single-branch --branch devnet/dev https://github.com/GetGenki/core
 ```
 
 #### Set the environment
+And make sure you have installed an updated version of NodeJS & yarn:
+
+```bash
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+and then
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt-get update && sudo apt-get install yarn
+```
+
 Second, we need to setup the the environment's modules and dependencies. Let _lerna_ do the job ...
 ```bash
 yarn global add lerna
 cd core
 lerna bootstrap
+```
+if the install failed because of rights issues, please try: 
+
+```bash
+sudo npm install --g lerna
 ```
 
 #### Configure the core
