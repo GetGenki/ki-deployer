@@ -95,7 +95,7 @@ yarn relay:kinet
 ```
 Your relay will start synchronising the blockchain with the other peers on the network. This looks like this:
 
-![Synchronizing relay]("/img/relay-synch.png")
+![Synchronizing relay]("https://github.com/GetGenki/ki-deployer/blob/master/img/relay-synch.png")
 
 #### Validator
 And then your validator...
