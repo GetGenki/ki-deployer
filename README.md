@@ -39,7 +39,7 @@ GRANT ALL PRIVILEGES ON DATABASE kinet_db TO <your_username>;
 First, let's get the code of the core. The latest modifications will be pushed to the devnet/dev branch during the development phase.
 
 ```bash
-git clone --single-branch --branch devnet/dev https://github.com/GetGenki/core
+git clone --single-branch --branch devnet/dev https://github.com/KiFoundation/core
 ```
 
 #### Set the environment
@@ -65,7 +65,7 @@ yarn global add lerna
 cd core
 lerna bootstrap
 ```
-if the install failed because of rights issues, please try: 
+if the install failed because of rights issues, please try:
 
 ```bash
 sudo npm install --g lerna
@@ -124,7 +124,7 @@ yarn relay:kinet
 ```
 Your relay will start synchronising the blockchain with the other peers on the network. This looks like this:
 
-![Synchronizing relay](https://github.com/GetGenki/ki-deployer/blob/master/img/relay-synch.png)
+![Synchronizing relay](https://github.com/KiFoundation/ki-deployer/blob/master/img/relay-synch.png)
 
 #### Validator
 And then your validator...
